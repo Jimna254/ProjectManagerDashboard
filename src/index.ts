@@ -136,20 +136,27 @@ class ProjectActions {
     });
   }
 
+  
   deleteProject(index: number) {
     Projects.splice(index, 1);
 
     this.displayProjects();
+    
   }
 
   updateProject(index: number) {
     currentIndex = index;
+    let project = Projects[index];
 
-    console.log(currentIndex);
+    projectname.value = project.projectname;
+    projectmanager.value = project.projectmanager;
+    email.value = project.email;
+    deadline.value = project.deadline;
+    priority.value = project.priority;
 
     createProjectform.style.display = "flex";
-
-    let user = Projects[index];
+    toggleform.textContent = "Update Project";
+    toggleform.style.backgroundColor = "orange";
   }
 }
 
