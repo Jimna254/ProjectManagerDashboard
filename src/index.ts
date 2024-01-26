@@ -13,6 +13,7 @@ let priority = document.querySelector("#priority") as HTMLInputElement;
 
 let projects = document.querySelector(".projects") as HTMLTableElement;
 
+let Projects: Project[] = JSON.parse(localStorage.getItem("Projects") || "[]");
 // currentEmployee index
 let currentIndex: number;
 
@@ -36,8 +37,6 @@ interface Project {
   deadline: string;
   priority: string;
 }
-
-let Projects: Project[] = [];
 
 createProjectform.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -65,6 +64,7 @@ createProjectform.addEventListener("submit", (e) => {
     } else {
       Projects.push(ProjectDetails);
     }
+    localStorage.setItem("Projects", JSON.stringify(Projects));
 
     instance.displayProjects();
 
@@ -133,7 +133,6 @@ class ProjectActions {
       projectrecord.appendChild(deadline);
       projectrecord.appendChild(priority);
       projectrecord.appendChild(deletebtn);
-      
     });
   }
 
