@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">PMS</div>
+      <button id="logoutbtn">Logout</button>
+    </nav>
+    <hr />
+
+    <div class="form-container">
+      <form class="createProjectform" style="display: none">
+        <h2>Create Project</h2>
+
+        <label for="projectname"> Project Name:</label>
+        <input type="text" id="projectname" />
+        <label for="projectmanager"> Project Manager:</label>
+        <input type="text" id="projectmanager" />
+        <label for="email"> Project manager email:</label>
+        <input type="text" id="email" />
+        <label for="deadline"> Project Deadline:</label>
+        <input type="text" id="deadline" />
+
+        <select id="Priority">
+          <option value="">--Select Priority--</option>
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+        </select>
+        <input type="submit" value="Create Project" id="createProjectbtn" />
+      </form>
+
+      <button id="toggleform">Add Project</button>
+    </div>
+
+    <table class="projects" style="margin-top: 20px">
+      <tr class="tableheading">
+        <th>No.</th>
+        <th>ProjectName</th>
+        <th>Project Manage</th>
+        <th>Project Manager Email</th>
+        <th>Project Deadline</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+    </table>
+
+    <script src="dist/index.js"></script>
+  </body>
+</html>

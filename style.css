@@ -1,0 +1,85 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#logoutbtn {
+  background-color: #7642b3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#logoutbtn:hover {
+  color: rgb(218, 192, 192);
+  background-color: #f14b2e;
+}
+
+.createProjectform {
+  width: 50vw;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.createProjectform > input,
+.createProjectform > select {
+  width: 22vw;
+  padding: 5px;
+  min-width: 240px;
+}
+
+#createProjectbtn {
+  width: 95%;
+  background-color: #0c63dd;
+  border: none;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#toggleform {
+  background-color: #0c63dd;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggleform:hover {
+  background-color: #01419c;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.projects > button {
+  padding: 10px;
+}
